@@ -4,9 +4,14 @@
     <title>Story Slider</title>
     <link rel='stylesheet' href='./bootstrap.min.css'>
     <style>
+        #story-slider {
+            background: #212121;
+        }
+
         #story-slider a {
             color: inherit;
             text-decoration: none;
+            width: 100%;
         }
 
         #story-slider a:hover {
@@ -16,6 +21,8 @@
 
         #slider-playlist {
             background: #212121;
+            height: inherit;
+            margin: auto;
         }
 
         .playlist {
@@ -31,7 +38,16 @@
             padding: 0px;
             margin: 0px;
             overflow: hidden;
-            height: 500px;
+            max-height: 550px;
+        }
+
+        #slider-main>ul {
+            white-space: nowrap;
+            position: relative
+        }
+
+        #slider-main>li {
+            display: inline;
         }
 
         #slider-list {
@@ -53,7 +69,9 @@
         }
 
         img.slider-img {
-            width: 100%
+            /* width: 100%; */
+            margin: auto;
+            height: 100%;
         }
 
         .slider-description {
@@ -169,7 +187,7 @@
 
         })
         var wraper_slider =
-            "<div class='row'>\
+            "<div class='row slider-wrapper'>\
                     <div id='slider-playlist' class='col-md-3'>"+ playlist.join('') + "</div>\
                     <div id='slider-main' class='col-md-9'>\
                         <ul id='slider-list'>"
