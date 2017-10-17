@@ -1,0 +1,213 @@
+<html>
+
+<head>
+    <style>
+        #navcontainer ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        #navcontainer ul li {
+            display: inline;
+        }
+
+        /* #slider-main>ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        #slider-main>ul>li {
+            display: inline;
+        } */
+
+        #slider-main>ul {
+            white-space: nowrap;
+            position: relative;
+            display: inline;
+        }
+
+        #slider-main>ul>li {
+            display: inline;
+        }
+
+        .slide {
+            text-align: center;
+            position: relative;
+            color: #ecf0f1;
+            display: inline;
+        }
+
+        img.slider-img {
+            margin: auto;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .slider-description {
+            white-space: initial;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            background: rgb(0, 0, 0);
+            /* fallback color */
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            text-align: left;
+        }
+
+        .slider-description:hover {
+            color: #9E9E9E
+        }
+
+        .story-title h5 {
+            font-weight: bold
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navcontainer">
+        <ul>
+            <li>
+                <a href="#">Milk</a>
+            </li>
+            <li>
+                <a href="#">Eggs</a>
+            </li>
+            <li>
+                <a href="#">Cheese</a>
+            </li>
+            <li>
+                <a href="#">Vegetables</a>
+            </li>
+            <li>
+                <a href="#">Fruit</a>
+            </li>
+        </ul>
+    </div>
+    <div class="row slider-wrapper">
+        <div id="slider-playlist" class="col-md-3">
+            <a href="javascript:sliders[0].goTo(2)">
+                <li id="playlist-0" class="playlist"> Diikuti 11 Negara, PPMI Mesir Sukses Adakan Wisuda Akbar Universitas Al-Azhar </li>
+            </a>
+            <a href="javascript:sliders[0].goTo(2)">
+                <li id="playlist-1" class="playlist"> Diikuti 11 Negara, PPMI Mesir Sukses Adakan Wisuda Akbar Universitas Al-Azhar </li>
+            </a>
+            <a href="javascript:sliders[0].goTo(2)">
+                <li id="playlist-2" class="playlist"> Diikuti 11 Negara, PPMI Mesir Sukses Adakan Wisuda Akbar Universitas Al-Azhar </li>
+            </a>
+            <a href="javascript:sliders[0].goTo(2)">
+                <li id="playlist-3" class="playlist"> Diikuti 11 Negara, PPMI Mesir Sukses Adakan Wisuda Akbar Universitas Al-Azhar </li>
+            </a>
+            <a href="javascript:sliders[0].goTo(2)">
+                <li id="playlist-4" class="playlist"> Diikuti 11 Negara, PPMI Mesir Sukses Adakan Wisuda Akbar Universitas Al-Azhar </li>
+            </a>
+        </div>
+        <div id="slider-main" class="col-md-9">
+            <ul id="slider-list">
+                <li id="slide-0" class="slides">
+                    <a href="/post1">
+                        <div class="slide">
+                            <img class="slider-img" src="./images/main.jpg">
+                            <span class="slider-description">
+                                <div class="story-title">
+                                    <h5>Diikuti 11 Negara, PPMI Mesir Sukses Adakan Wisuda Akbar Universitas Al-Azhar</h5>
+                                </div>
+                                <div class="story-description">Cairo - Diikuti sebanyak 259 wisudawan dan wisudawati dari 11 negara serta dihadiri oleh
+                                    1500 tamu dari Indonesia dan berbagai negara lainnya</div>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li id="slide-1" class="slides">
+                    <a href="undefined">
+                        <div class="slide">
+                            <img class="slider-img" src="./images/1.jpg">
+                            <span class="slider-description">
+                                <div class="story-title">
+                                    <h5>Diikuti 11 Negara, PPMI Mesir Sukses Adakan Wisuda Akbar Universitas Al-Azhar</h5>
+                                </div>
+                                <div class="story-description">Cairo - Diikuti sebanyak 259 wisudawan dan wisudawati dari 11 negara serta dihadiri oleh
+                                    1500 tamu dari Indonesia dan berbagai negara lainnya</div>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li id="slide-2" class="slides">
+                    <a href="undefined">
+                        <div class="slide">
+                            <img class="slider-img" src="./images/2.jpg">
+                            <span class="slider-description">
+                                <div class="story-title">
+                                    <h5>Diikuti 11 Negara, PPMI Mesir Sukses Adakan Wisuda Akbar Universitas Al-Azhar</h5>
+                                </div>
+                                <div class="story-description">Cairo - Diikuti sebanyak 259 wisudawan dan wisudawati dari 11 negara serta dihadiri oleh
+                                    1500 tamu dari Indonesia dan berbagai negara lainnya</div>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li id="slide-3" class="slides">
+                    <a href="undefined">
+                        <div class="slide">
+                            <img class="slider-img" src="./images/3.jpg">
+                            <span class="slider-description">
+                                <div class="story-title">
+                                    <h5>Diikuti 11 Negara, PPMI Mesir Sukses Adakan Wisuda Akbar Universitas Al-Azhar</h5>
+                                </div>
+                                <div class="story-description">Cairo - Diikuti sebanyak 259 wisudawan dan wisudawati dari 11 negara serta dihadiri oleh
+                                    1500 tamu dari Indonesia dan berbagai negara lainnya</div>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li id="slide-4" class="slides">
+                    <a href="undefined">
+                        <div class="slide">
+                            <img class="slider-img" src="./images/4.jpg">
+                            <span class="slider-description">
+                                <div class="story-title">
+                                    <h5>Diikuti 11 Negara, PPMI Mesir Sukses Adakan Wisuda Akbar Universitas Al-Azhar</h5>
+                                </div>
+                                <div class="story-description">Cairo - Diikuti sebanyak 259 wisudawan dan wisudawati dari 11 negara serta dihadiri oleh
+                                    1500 tamu dari Indonesia dan berbagai negara lainnya</div>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <!-- <a href="/post1">
+                    <li id="slide-0" class="slides">
+                        <div class="slide"> aaa </div>
+                    </li>
+                </a>
+                <a href="undefined">
+                    <li id="slide-1" class="slides">
+                        <div class="slide"> aaa </div>
+                    </li>
+                </a>
+                <a href="undefined">
+                    <li id="slide-2" class="slides">
+                        <div class="slide"> aaa </div>
+                    </li>
+                </a>
+                <a href="undefined">
+                    <li id="slide-3" class="slides">
+                        <div class="slide"> aaa </div>
+                    </li>
+                </a>
+                <a href="undefined">
+                    <li id="slide-4" class="slides">
+                        <div class="slide"> aaa </div>
+                    </li>
+                </a> -->
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

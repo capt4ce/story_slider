@@ -47,10 +47,11 @@
 
         #slider-main>ul {
             white-space: nowrap;
-            position: relative
+            position: relative;
+            display: inline;
         }
 
-        #slider-main>li {
+        #slider-main>ul>li {
             display: inline;
         }
 
@@ -66,17 +67,14 @@
         .slide {
             text-align: center;
             position: relative;
-            color: #ecf0f1
-        }
-
-        .slide:hover {
-            color: #9E9E9E
+            color: #ecf0f1;
+            display: inline;
         }
 
         img.slider-img {
             margin: auto;
+            width: 100%;
             height: 100%;
-            overflow: hidden;
         }
 
         .slider-description {
@@ -90,6 +88,10 @@
             background: rgba(0, 0, 0, 0.7);
             padding: 10px;
             text-align: left;
+        }
+
+        .slider-description:hover {
+            color: #9E9E9E
         }
 
         .story-title h5 {
@@ -171,7 +173,7 @@
             if (idx > 4)
                 return;
             var elem =
-                "<a href='" + val.articleURL + "'><li id='slide-" + idx + "' class='slides'>\
+                "<li id='slide-" + idx + "' class='slides'><a href='" + val.articleURL + "'>\
                         <div class='slide'>\
                             <img class='slider-img' src='"+ val.imgURL + "'>\
                             <span class='slider-description'>\
@@ -179,7 +181,12 @@
                                 <div class='story-description'>"+ val.description + "</div>\
                             </span>\
                         </div>\
-                    </li></a>"
+                    </a></li>"
+
+            // var elem =
+            //     "<li id='slide-" + idx + "' class='slides'><a href='" + val.articleURL + "'>\
+            //                 aaa\
+            //         </a></li>"
 
             return elem
 
