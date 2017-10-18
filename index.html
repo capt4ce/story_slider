@@ -53,6 +53,9 @@
 
         #slider-main>ul>li {
             display: inline;
+            margin: 0;
+            padding: 0;
+            letter-spacing: -1px
         }
 
         #slider-list {
@@ -75,6 +78,7 @@
             margin: auto;
             width: 100%;
             height: 100%;
+            vertical-align: initial;
         }
 
         .slider-description {
@@ -109,21 +113,25 @@
             {
                 title: 'Diikuti 11 Negara, PPMI Mesir Sukses Adakan Wisuda Akbar Universitas Al-Azhar',
                 description: 'Cairo - Diikuti sebanyak 259 wisudawan dan wisudawati dari 11 negara serta dihadiri oleh 1500 tamu dari Indonesia dan berbagai negara lainnya',
+                articleURL: '/post1',
                 imgURL: './images/1.jpg'
             },
             {
                 title: 'Diikuti 11 Negara, PPMI Mesir Sukses Adakan Wisuda Akbar Universitas Al-Azhar',
                 description: 'Cairo - Diikuti sebanyak 259 wisudawan dan wisudawati dari 11 negara serta dihadiri oleh 1500 tamu dari Indonesia dan berbagai negara lainnya',
+                articleURL: '/post1',
                 imgURL: './images/2.jpg'
             },
             {
                 title: 'Diikuti 11 Negara, PPMI Mesir Sukses Adakan Wisuda Akbar Universitas Al-Azhar',
                 description: 'Cairo - Diikuti sebanyak 259 wisudawan dan wisudawati dari 11 negara serta dihadiri oleh 1500 tamu dari Indonesia dan berbagai negara lainnya',
+                articleURL: '/post1',
                 imgURL: './images/3.jpg'
             },
             {
                 title: 'Diikuti 11 Negara, PPMI Mesir Sukses Adakan Wisuda Akbar Universitas Al-Azhar',
                 description: 'Cairo - Diikuti sebanyak 259 wisudawan dan wisudawati dari 11 negara serta dihadiri oleh 1500 tamu dari Indonesia dan berbagai negara lainnya',
+                articleURL: '/post1',
                 imgURL: './images/4.jpg'
             }
         ]
@@ -195,7 +203,7 @@
             if (idx > 4)
                 return;
             var elem =
-                "<a href='javascript:sliders[0].goTo(2)" + '' + "'><li id='playlist-" + idx + "' class='playlist'>\
+                "<a href='javascript:sliders[0].goTo(" + (idx) + ")" + '' + "'><li id='playlist-" + idx + "' class='playlist'>\
                         "+ val.title + "\
                     </li></a>"
             return elem
@@ -214,6 +222,11 @@
         $('#slider-main').each(function () {
             sliders.push(new Slider(this))
         })
+        $('#slider-main').css('overflow', 'initial')
+        setTimeout(function () {
+            $('#slider-main').css('overflow', 'hidden')
+        }, 0);
+
     })
 </script>
 
