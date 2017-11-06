@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>
+            Story Slider
+        </title>
+    </head>
+    <style>
+        div#background-slideshow{
+    position: relative;
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    top: 0px;
+    /* right: 0px; */
+}
+
+img.slides{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    height: 745px;
+}
+
+img#home-image{
+    z-index: -666;
+}
+
+img#shop-image{
+    z-index: -777;
+}
+
+img#dine-image{
+    z-index: -888;
+}
+
+img#watch-image{
+    z-index: -999;
+}
+    </style>
+    <body>
+            <div id="background-slideshow">
+                    <img id="home-image" class="slides" src="images/1.jpg" />
+                    <img id="shop-image" class="slides" src="images/2.jpg" />
+                    <img id="dine-image" class="slides" src="images/3.jpg" />
+                    <img id="watch-image" class="slides" src="images/4.jpg" />
+                </div>
+    </body>
+    <script src="./jquery-3.2.1.min.js"></script>
+    <script>
+        var indexer = 0;
+var animateInterval;
+
+function animate(){
+        if(indexer == 0){
+            $("#background-slideshow > #watch-image").fadeOut(2000);
+            $("#background-slideshow > #home-image").fadeIn(2000);
+        }
+        else if(indexer == 1){
+            $("#background-slideshow > #home-image").fadeOut(2000);
+            $("#background-slideshow > #shop-image").fadeIn(2000);
+        }
+        else if(indexer == 2){
+            $("#background-slideshow > #shop-image").fadeOut(2000);
+            $("#background-slideshow > #dine-image").fadeIn(2000);
+        }
+        else if(indexer == 3){
+            $("#background-slideshow > #dine-image").fadeOut(2000);
+            $("#background-slideshow > #watch-image").fadeIn(2000);
+        }
+
+        if(indexer == 3) indexer = 0;
+        else indexer++;
+    }
+
+    animateInterval = setInterval(animate, 10000);
+    animate();
+    </script>
+</html>
